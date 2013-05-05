@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: about | Jeff Richardson]]></title>
+  <link href="http://jeffawesome.com/blog/categories/about/atom.xml" rel="self"/>
+  <link href="http://jeffawesome.com/"/>
+  <updated>2013-05-04T23:52:09-07:00</updated>
+  <id>http://jeffawesome.com/</id>
+  <author>
+    <name><![CDATA[Jeff Richardson]]></name>
+    <email><![CDATA[jeff@masterpieceinteractive.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[there's a million things I don't know...]]></title>
+    <link href="http://jeffawesome.com/blog/2013/05/01/theres-a-million-things-i-dont-know-dot-dot-dot/"/>
+    <updated>2013-05-01T20:50:00-07:00</updated>
+    <id>http://jeffawesome.com/blog/2013/05/01/theres-a-million-things-i-dont-know-dot-dot-dot</id>
+    <content type="html"><![CDATA[<p>I love learning... I have since I was a kid. I remember my favorite time of the year was the summer. I was out of boring school
+(yeah I realize the irony of not enjoying school but loving to learn)... and at least once a week my mom would drop me off at the library. I loved going to the library and reading. A funny thing started to happen the more I would learn and pick new skills up, I would discover there were a million things I still needed to learn.<!-- more --></p>
+
+<p>I still feel this way 10 years later. There is so much I don't know but I love discovering and going down a new rabbit hole into another crazy world. Whether it was diving into the terminal for the first time or beginning to learn javascript and stop depending on a library... I have learned a lot but each time I start to feel confident I realize there's a million things I still don't know.</p>
+]]></content>
+  </entry>
+  
+</feed>

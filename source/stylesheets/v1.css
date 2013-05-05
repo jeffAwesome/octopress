@@ -1,0 +1,10 @@
+body > nav {
+	background-image: none;
+	background-color: #0188b7;
+}
+
+body > nav a {
+	text-shadow: none;
+	color: #fff !important;
+}
+
