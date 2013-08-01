@@ -31,4 +31,5 @@ period... but its extremely true. Each day things feel less awkward, but its onl
 to get a bit more awkward just when I think I've learned it all :).
 
 Be Awesome
+
 Jeff Richardson
