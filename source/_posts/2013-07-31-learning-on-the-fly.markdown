@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "learning on the fly"
+title: "Learning on the fly"
 date: 2013-07-31 23:22
 comments: true
 categories: learn, programming, thoughts

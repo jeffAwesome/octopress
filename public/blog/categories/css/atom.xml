@@ -4,7 +4,7 @@
   <title><![CDATA[Category: css | Jeff Richardson]]></title>
   <link href="http://jeffawesome.com/blog/categories/css/atom.xml" rel="self"/>
   <link href="http://jeffawesome.com/"/>
-  <updated>2013-05-04T23:52:09-07:00</updated>
+  <updated>2013-07-31T23:59:22-05:00</updated>
   <id>http://jeffawesome.com/</id>
   <author>
     <name><![CDATA[Jeff Richardson]]></name>
@@ -16,7 +16,7 @@
   <entry>
     <title type="html"><![CDATA[quick way to center an absolutely positioned element]]></title>
     <link href="http://jeffawesome.com/blog/2013/05/04/quick-way-to-center-an-absolutely-positioned-element/"/>
-    <updated>2013-05-04T23:39:00-07:00</updated>
+    <updated>2013-05-04T23:39:00-05:00</updated>
     <id>http://jeffawesome.com/blog/2013/05/04/quick-way-to-center-an-absolutely-positioned-element</id>
     <content type="html"><![CDATA[<p>I find it hard to blog about technical related issues. I feel most of the time everything I have to say has already been said but this is something i've found a lot of my peers especially at the current company I work at weren't aware of... its a quick way to center an absolutely positioned element.<!-- more --></p>
 
