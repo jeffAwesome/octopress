@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: rails and Javascript | Jeff Richardson]]></title>
+  <link href="http://jeffawesome.com/blog/categories/rails-and-javascript/atom.xml" rel="self"/>
+  <link href="http://jeffawesome.com/"/>
+  <updated>2013-08-01T00:02:47-05:00</updated>
+  <id>http://jeffawesome.com/</id>
+  <author>
+    <name><![CDATA[Jeff Richardson]]></name>
+    <email><![CDATA[jeff@masterpieceinteractive.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[My attempt to learn Ruby Part 1]]></title>
+    <link href="http://jeffawesome.com/blog/2013/05/15/my-attempt-to-learn-ruby-part-1/"/>
+    <updated>2013-05-15T22:20:00-05:00</updated>
+    <id>http://jeffawesome.com/blog/2013/05/15/my-attempt-to-learn-ruby-part-1</id>
+    <content type="html"><![CDATA[<p>In the constantly changing area of front end web development there may be a time when you have to at the very least understand the basics of a backend language such as ruby. I am going to use a language all front end developers should know... Javascript to help me and hopefully you understand the funadmentals of ruby... lets dig in.<!--more--></p>
+
+<h2>Understanding Ruby through Javascript</h2>
+
+<p>When you aren't a 'true' programmer by nature learning a new language can be intimidating, especially when its a backend language... but after several hours of blindly reading I started taking notes and comparing it to a language I already know very well... Javascript. A lot of what I have below is mainly just rough notes I made from reading through the book I previously mentioned. It may not help you at all but it seems to be the trick I needed to grasp the new language.</p>
+
+<h2>Lets start with null and nil</h2>
+
+<p>In javascript we have null in Ruby we have nil... for the most part they are the same. And the interesting thing about it is they are both objects. Everything in ruby is an object but to test in Javascript.. simply try this in the console.</p>
+
+<pre><code>typeof null;
+/* It will return object. */
+</code></pre>
+
+<h2>Methods</h2>
+
+<p>So far from my understanding a method in ruby is a lot like a function in javascript. Consider the following example in javascript:</p>
+
+<pre><code>function say_goodnight(name) {
+    var result = 'Good Night' + name;
+    return result;
+}
+
+/* Then you could call that function like so: */
+
+say_goodnight('John-Boy');
+say_goodnight('Mary-Ellen');
+</code></pre>
+
+<p>In ruby it looks like this:</p>
+
+<pre><code>def say_goodnight(name)
+    result = 'Good night, ' + name
+    return result
+end
+
+/* and you'd call it like so */
+
+puts say_goodnight('May-Ellen')
+puts say_goodnight('John-Boy')
+</code></pre>
+
+<p>In ruby the semi colons are optional as long as each statement is in a new line.</p>
+
+<h2>Arrays and Hash</h2>
+
+<p>Arrays in ruby and javascript are very similar</p>
+
+<p>in javascript its</p>
+
+<pre><code>a = [1, 'cat', 3.14];
+
+/* You can access them in javascript with */
+
+a[0];
+
+/* and can assign a value like so */
+
+a[2] = null;
+</code></pre>
+
+<p>in ruby its</p>
+
+<pre><code>a = [1, 'cat', 3.14]
+a[0]  
+a[2] = nil
+</code></pre>
+
+<h3>What the heck is a hash?</h3>
+
+<p>This was the exact thing I thought when it was first mentioned but in ruby it is very similar to an array. It looks almost identical to a Javascript object on first look. In Javascript you can define Objects, which are the closest things to an associative array for the language.</p>
+
+<p>A javascript object</p>
+
+<pre><code>theJsObject = {
+    shoppingCart: 'shopping cart value',
+    anotherSymbol: 'another value'
+}
+
+/* To Access a value with Javascript  */
+
+theJsObject.shoppingCart
+/* or */
+theJsObject['shoppingCart']
+/* Returns shopping cart value */
+</code></pre>
+
+<p>In Ruby a Hash looks like this:</p>
+
+<pre><code>the_hash_example = {
+    :shopping_cart =&gt; 'shopping cart value',
+    :another_symbol =&gt; 'another value'
+}
+
+/* To grab a value from the hash you would simply do the following */
+
+the_hash_example[:shopping_cart] 
+/* Returns shopping cart value */
+</code></pre>
+
+<p>See how similar to a Javascript object it is? You can even grab a value in javascript an almost identical way.
+I know that they aren't the same thing but it helps me start to wrap my mind around what's going on with ruby and some of its language fundamentals.</p>
+
+<h2>Comparing Helps me maybe it helps you.</h2>
+
+<p>When first reading through the code I was simply seeing the code but when I think about it and compare it to something I alredy know it does wonders... the ruby code makes so much more sense... now I understand that I am probably over simplifying what's happening and I may even be mis-stating something and if so <strong>please let me know</strong>, but overall this is helping me grok the fundamentals of the language.</p>
+
+<h2>Whats next?</h2>
+
+<p>In the next post I will be going over differences and similarities with control statements between the two languages.</p>
+
+<p>Be Awesome.</p>
+]]></content>
+  </entry>
+  
+</feed>
