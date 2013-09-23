@@ -4,7 +4,7 @@
   <title><![CDATA[Jeff Richardson]]></title>
   <link href="http://jeffawesome.com/atom.xml" rel="self"/>
   <link href="http://jeffawesome.com/"/>
-  <updated>2013-08-01T00:09:12-05:00</updated>
+  <updated>2013-09-23T01:16:28-05:00</updated>
   <id>http://jeffawesome.com/</id>
   <author>
     <name><![CDATA[Jeff Richardson]]></name>
@@ -12,6 +12,71 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Installing rails app with postgreSQL]]></title>
+    <link href="http://jeffawesome.com/blog/2013/09/23/installing-rails-app-with-postgresql/"/>
+    <updated>2013-09-23T00:56:00-05:00</updated>
+    <id>http://jeffawesome.com/blog/2013/09/23/installing-rails-app-with-postgresql</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve been working on the backend side of rails apps the past few months. One thing I&#8217;ve realized
+is that you can go through a million tutorials but until you put those concepts to work you&#8217;ll have
+a harder time grasping them.</p>
+
+<p>Today I want to go over a very simple concept. This is applicable in many ways, especially when learning
+to use different databases in a rails app. Today we&#8217;ll be covering installing a brand new rails app with
+the postgreSQL database. Normally you&#8217;d have the SQLite db set up by default. There are numerous advantages
+to this.. one being that heroku uses this&#8230; and if you&#8217;re installing your apps on heroku its nice to be
+using the same database as heroku to avoid any potential issues that could come up relating to database configuration.</p>
+
+<h1>Okay on to business&#8230;</h1>
+
+<figure class='code'><figcaption><span>Time to be Awesome </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails new yourApp --database=postgresql</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&#8217;s it. If you already have a rails app created and want to switch its still very straightforward.</p>
+
+<p>1 Remove the sqlite gem from your gemfile
+2 Add in the gem &#8216;pg&#8217; into your gemfile
+3 run bundle
+4 Then make sure your database.yml files are using the correct adapters. Here is an example</p>
+
+<figure class='code'><figcaption><span>Time to be Awesome </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>development:
+</span><span class='line'>  adapter: postgresql
+</span><span class='line'>  encoding: unicode
+</span><span class='line'>  database: appname_development
+</span><span class='line'>  pool: 5
+</span><span class='line'>  username: your_system_username
+</span><span class='line'>  password:</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&#8217;s it. You should be good to go. Of course you&#8217;ll need to make sure you have the PG installed on your system.
+If you have homebrew you can do this easily</p>
+
+<figure class='code'><figcaption><span>Time to be Awesome </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ brew update
+</span><span class='line'>  $ brew doctor
+</span><span class='line'>  $ brew install postgresql</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The first two commands make sure brew is up to date and healthy&#8230; the third is the command to install postgreSQL. That&#8217;s it.
+This is something I would have found useful a few months ago so I figured I would include it here.</p>
+
+<p>Enjoy and Be Awesome</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Learning on the fly]]></title>

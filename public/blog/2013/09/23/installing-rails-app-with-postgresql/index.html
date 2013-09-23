@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>there's a million things I don't know... - Jeff Richardson</title>
+  <title>Installing rails app with postgreSQL - Jeff Richardson</title>
   <meta name="author" content="Jeff Richardson">
 
   
-  <meta name="description" content="I love learning&#8230; I have since I was a kid. I remember my favorite time of the year was the summer. I was out of boring school
-(yeah I realize &hellip;">
+  <meta name="description" content="I&#8217;ve been working on the backend side of rails apps the past few months. One thing I&#8217;ve realized
+is that you can go through a million &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://jeffawesome.com/blog/2013/05/01/theres-a-million-things-i-dont-know-dot-dot-dot">
+  <link rel="canonical" href="http://jeffawesome.com/blog/2013/09/23/installing-rails-app-with-postgresql">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/v1.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -71,7 +71,7 @@
   
   <header>
     
-      <h1 class="entry-title">There's a Million Things I Don't Know...</h1>
+      <h1 class="entry-title">Installing Rails App With postgreSQL</h1>
     
     
       <p class="meta">
@@ -87,7 +87,7 @@
   
 
 
-<time datetime="2013-05-01T20:50:00-05:00" pubdate data-updated="true">May 1<span>st</span>, 2013</time>
+<time datetime="2013-09-23T00:56:00-05:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -96,10 +96,63 @@
   </header>
 
 
-<div class="entry-content"><p>I love learning&#8230; I have since I was a kid. I remember my favorite time of the year was the summer. I was out of boring school
-(yeah I realize the irony of not enjoying school but loving to learn)&#8230; and at least once a week my mom would drop me off at the library. I loved going to the library and reading. A funny thing started to happen the more I would learn and pick new skills up, I would discover there were a million things I still needed to learn.<!-- more --></p>
+<div class="entry-content"><p>I&#8217;ve been working on the backend side of rails apps the past few months. One thing I&#8217;ve realized
+is that you can go through a million tutorials but until you put those concepts to work you&#8217;ll have
+a harder time grasping them.</p>
 
-<p>I still feel this way 10 years later. There is so much I don&#8217;t know but I love discovering and going down a new rabbit hole into another crazy world. Whether it was diving into the terminal for the first time or beginning to learn javascript and stop depending on a library&#8230; I have learned a lot but each time I start to feel confident I realize there&#8217;s a million things I still don&#8217;t know.</p>
+<p>Today I want to go over a very simple concept. This is applicable in many ways, especially when learning
+to use different databases in a rails app. Today we&#8217;ll be covering installing a brand new rails app with
+the postgreSQL database. Normally you&#8217;d have the SQLite db set up by default. There are numerous advantages
+to this.. one being that heroku uses this&#8230; and if you&#8217;re installing your apps on heroku its nice to be
+using the same database as heroku to avoid any potential issues that could come up relating to database configuration.</p>
+
+<h1>Okay on to business&#8230;</h1>
+
+<figure class='code'><figcaption><span>Time to be Awesome </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails new yourApp --database=postgresql</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&#8217;s it. If you already have a rails app created and want to switch its still very straightforward.</p>
+
+<p>1 Remove the sqlite gem from your gemfile
+2 Add in the gem &#8216;pg&#8217; into your gemfile
+3 run bundle
+4 Then make sure your database.yml files are using the correct adapters. Here is an example</p>
+
+<figure class='code'><figcaption><span>Time to be Awesome </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>development:
+</span><span class='line'>  adapter: postgresql
+</span><span class='line'>  encoding: unicode
+</span><span class='line'>  database: appname_development
+</span><span class='line'>  pool: 5
+</span><span class='line'>  username: your_system_username
+</span><span class='line'>  password:</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That&#8217;s it. You should be good to go. Of course you&#8217;ll need to make sure you have the PG installed on your system.
+If you have homebrew you can do this easily</p>
+
+<figure class='code'><figcaption><span>Time to be Awesome </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ brew update
+</span><span class='line'>  $ brew doctor
+</span><span class='line'>  $ brew install postgresql</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The first two commands make sure brew is up to date and healthy&#8230; the third is the command to install postgreSQL. That&#8217;s it.
+This is something I would have found useful a few months ago so I figured I would include it here.</p>
+
+<p>Enjoy and Be Awesome</p>
 </div>
 
 
@@ -122,12 +175,12 @@
   
 
 
-<time datetime="2013-05-01T20:50:00-05:00" pubdate data-updated="true">May 1<span>st</span>, 2013</time>
+<time datetime="2013-09-23T00:56:00-05:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/about/'>about</a>, <a class='category' href='/blog/categories/random/'>random</a>
+    <a class='category' href='/blog/categories/postgresql/'>postgreSQL</a>, <a class='category' href='/blog/categories/rails-ruby/'>rails,ruby,</a>
   
 </span>
 
@@ -136,7 +189,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jeffawesome.com/blog/2013/05/01/theres-a-million-things-i-dont-know-dot-dot-dot/" data-via="jeffAwesome" data-counturl="http://jeffawesome.com/blog/2013/05/01/theres-a-million-things-i-dont-know-dot-dot-dot/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://jeffawesome.com/blog/2013/09/23/installing-rails-app-with-postgresql/" data-via="jeffAwesome" data-counturl="http://jeffawesome.com/blog/2013/09/23/installing-rails-app-with-postgresql/" >Tweet</a>
   
   
   
@@ -147,8 +200,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2013/07/31/learning-on-the-fly/" title="Previous Post: Learning on the fly">&laquo; Learning on the fly</a>
       
-        <a class="basic-alignment right" href="/blog/2013/05/04/quick-way-to-center-an-absolutely-positioned-element/" title="Next Post: quick way to center an absolutely positioned element">quick way to center an absolutely positioned element &raquo;</a>
       
     </p>
   </footer>
@@ -243,8 +296,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://jeffawesome.com/blog/2013/05/01/theres-a-million-things-i-dont-know-dot-dot-dot/';
-        var disqus_url = 'http://jeffawesome.com/blog/2013/05/01/theres-a-million-things-i-dont-know-dot-dot-dot/';
+        var disqus_identifier = 'http://jeffawesome.com/blog/2013/09/23/installing-rails-app-with-postgresql/';
+        var disqus_url = 'http://jeffawesome.com/blog/2013/09/23/installing-rails-app-with-postgresql/';
         var disqus_script = 'embed.js';
       
     (function () {
