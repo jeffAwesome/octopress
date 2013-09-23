@@ -26,10 +26,10 @@ rails new yourApp --database=postgresql
 
 That's it. If you already have a rails app created and want to switch its still very straightforward.
 
-1 Remove the sqlite gem from your gemfile
-2 Add in the gem 'pg' into your gemfile
-3 run bundle
-4 Then make sure your database.yml files are using the correct adapters. Here is an example
+1. Remove the sqlite gem from your gemfile
+2. Add in the gem 'pg' into your gemfile
+3. run bundle
+4. Then make sure your database.yml files are using the correct adapters. Here is an example
 {% codeblock Time to be Awesome %}
 development:
   adapter: postgresql
@@ -42,7 +42,7 @@ development:
 That's it. You should be good to go. Of course you'll need to make sure you have the PG installed on your system.
 If you have homebrew you can do this easily
 
-{% codeblock Time to be Awesome %}
+{% codeblock %}
   $ brew update
   $ brew doctor
   $ brew install postgresql

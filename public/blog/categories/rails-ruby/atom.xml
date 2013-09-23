@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails,ruby, | Jeff Richardson]]></title>
   <link href="http://jeffawesome.com/blog/categories/rails-ruby/atom.xml" rel="self"/>
   <link href="http://jeffawesome.com/"/>
-  <updated>2013-09-23T01:16:28-05:00</updated>
+  <updated>2013-09-23T01:18:10-05:00</updated>
   <id>http://jeffawesome.com/</id>
   <author>
     <name><![CDATA[Jeff Richardson]]></name>
@@ -36,10 +36,11 @@ using the same database as heroku to avoid any potential issues that could come 
 
 <p>That's it. If you already have a rails app created and want to switch its still very straightforward.</p>
 
-<p>1 Remove the sqlite gem from your gemfile
-2 Add in the gem 'pg' into your gemfile
-3 run bundle
-4 Then make sure your database.yml files are using the correct adapters. Here is an example
+<ol>
+<li>Remove the sqlite gem from your gemfile</li>
+<li>Add in the gem 'pg' into your gemfile</li>
+<li>run bundle</li>
+<li>Then make sure your database.yml files are using the correct adapters. Here is an example
 <div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Time to be Awesome </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -49,17 +50,18 @@ using the same database as heroku to avoid any potential issues that could come 
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>development:
-</span><span class='line'>  adapter: postgresql
-</span><span class='line'>  encoding: unicode
-</span><span class='line'>  database: appname_development
-</span><span class='line'>  pool: 5
-</span><span class='line'>  username: your_system_username
-</span><span class='line'>  password:</span></code></pre></td></tr></table></div></figure></notextile></div>
+</span><span class='line'>adapter: postgresql
+</span><span class='line'>encoding: unicode
+</span><span class='line'>database: appname_development
+</span><span class='line'>pool: 5
+</span><span class='line'>username: your_system_username
+</span><span class='line'>password:</span></code></pre></td></tr></table></div></figure></notextile></div>
 That's it. You should be good to go. Of course you'll need to make sure you have the PG installed on your system.
-If you have homebrew you can do this easily</p>
+If you have homebrew you can do this easily</li>
+</ol>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Time to be Awesome </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ brew update

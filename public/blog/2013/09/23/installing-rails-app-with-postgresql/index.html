@@ -115,10 +115,13 @@ using the same database as heroku to avoid any potential issues that could come 
 
 <p>That&#8217;s it. If you already have a rails app created and want to switch its still very straightforward.</p>
 
-<p>1 Remove the sqlite gem from your gemfile
-2 Add in the gem &#8216;pg&#8217; into your gemfile
-3 run bundle
-4 Then make sure your database.yml files are using the correct adapters. Here is an example</p>
+<ol>
+<li>Remove the sqlite gem from your gemfile</li>
+<li>Add in the gem &#8216;pg&#8217; into your gemfile</li>
+<li>run bundle</li>
+<li>Then make sure your database.yml files are using the correct adapters. Here is an example</li>
+</ol>
+
 
 <figure class='code'><figcaption><span>Time to be Awesome </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -140,8 +143,7 @@ using the same database as heroku to avoid any potential issues that could come 
 <p>That&#8217;s it. You should be good to go. Of course you&#8217;ll need to make sure you have the PG installed on your system.
 If you have homebrew you can do this easily</p>
 
-<figure class='code'><figcaption><span>Time to be Awesome </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>$ brew update
